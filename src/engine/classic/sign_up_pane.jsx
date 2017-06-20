@@ -36,7 +36,7 @@ export default class SignUpPane extends React.Component {
 
     const fields =
       !onlyEmail &&
-      additionalSignUpFields(model).map(x => (
+      additionalSignUpFields(model).map(x =>
         <CustomInput
           iconUrl={x.get('icon')}
           key={x.get('name')}
@@ -47,7 +47,7 @@ export default class SignUpPane extends React.Component {
           type={x.get('type')}
           validator={x.get('validator')}
         />
-      ));
+      );
 
     const passwordPane =
       !onlyEmail &&

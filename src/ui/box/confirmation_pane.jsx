@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { BackButton, CloseButton } from './button';
 
-const ConfirmationPane = ({ backHandler, children, closeHandler, svg }) => (
+const ConfirmationPane = ({ backHandler, children, closeHandler, svg }) =>
   <div className="auth0-lock-confirmation">
     {closeHandler && <CloseButton onClick={closeHandler} />}
     {backHandler && <BackButton onClick={backHandler} />}
@@ -10,8 +10,7 @@ const ConfirmationPane = ({ backHandler, children, closeHandler, svg }) => (
       <span dangerouslySetInnerHTML={{ __html: svg }} />
       {children}
     </div>
-  </div>
-);
+  </div>;
 
 ConfirmationPane.propTypes = {
   backHandler: PropTypes.func,

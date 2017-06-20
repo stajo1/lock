@@ -167,8 +167,11 @@ export function resetPassword(id) {
 function resetPasswordSuccess(id) {
   const m = read(getEntity, 'lock', id);
   if (hasScreen(m, 'login')) {
-    swap(updateEntity, 'lock', id, m =>
-      setScreen(l.setSubmitting(m, false), 'login', ['']) // array with one empty string tells the function to not clear any field
+    swap(
+      updateEntity,
+      'lock',
+      id,
+      m => setScreen(l.setSubmitting(m, false), 'login', ['']) // array with one empty string tells the function to not clear any field
     );
 
     // TODO: should be handled by box

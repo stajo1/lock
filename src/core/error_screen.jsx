@@ -13,11 +13,10 @@ export default class ErrorScreen extends Screen {
   }
 }
 
-const ErrorPane = ({ i18n }) => (
+const ErrorPane = ({ i18n }) =>
   <div className="auth0-lock-error-pane">
     <p>{i18n.html('unrecoverableError')}</p>
-  </div>
-);
+  </div>;
 
 ErrorPane.propTypes = {
   i18n: PropTypes.object.isRequired
